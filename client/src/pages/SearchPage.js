@@ -95,7 +95,7 @@ class SearchPage extends Component () {
                       <li key={result.id} className="list-group-item display-inline">
                         <img src={result.volumeInfo.imageLinks.thumbnail} className="thumbnail" alt={result.id}/>
                         <a href={result.volumeInfo.previewLink}><button className="btn btn-primary m-2 button">View</button></a> 
-                          <button className="btn btn-success m-2 button" onClick={this.saveBook} id ={result.id}>Save</button> 
+                          <button className="btn btn-success m-2 button" onClick={this.bookSaved} id ={result.id}>Save</button> 
                           <h4>{result.volumeInfo.title} by {result.volumeInfo.authors}</h4>
                         <p className="text-break">{result.volumeInfo.description}</p>
       
@@ -103,7 +103,7 @@ class SearchPage extends Component () {
                     ))}
                   </ul>
               ) : (
-                <p>no results to show....</p>
+                <p>No matches</p>
               )
               }
           
