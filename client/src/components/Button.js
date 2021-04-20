@@ -1,14 +1,10 @@
 import React from "react";
 
-function Button({type="default",
-className, children, onClick }) {
-
-return(
-
-    <button onClick={onClick}
-    className={["btn btn-lg", `btn-${type}`, className].join("")}>{children}</button>
-);
-
+function Button(props) {
+  return (
+    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+      {props.children}
+    </button>
+  );
 }
-
 export default Button;

@@ -4,9 +4,9 @@ import React from "react";
 function Search(props) {
     return (
 
-        <div className="input-group input-group-lg">
+        <div className="form-group">
 
-            <input className="form-control" type="text" {...props} />
+            <input className="form-control" {...props} />
         </div>
     )
 
